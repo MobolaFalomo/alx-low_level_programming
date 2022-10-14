@@ -29,6 +29,8 @@ int main(void)
 		printf("and is less than 6 and not 0");
 	}
 	printf("\n");
-	
-	Return (0); /*Return is a statement here*/
+	/**
+	  *it's okay to have no return statement for functions that have void
+	  return types
+	  */
 }
