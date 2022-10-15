@@ -14,8 +14,5 @@ int main(void)
 
 	putchar('\n');
 
-	/**
-	  *it's okay to have no return statement for functions that have void
-	  return types
-	 */
+	return (0);
 }
