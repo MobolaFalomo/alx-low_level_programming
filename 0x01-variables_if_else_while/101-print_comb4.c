@@ -1,4 +1,4 @@
-i#include <stdio.h>
+#include <stdio.h>
 
 /**
   * main - prints all possible different combinations of three digits
@@ -21,8 +21,8 @@ int main(void)
 
 				if (num1 == 7 && num2 == 8 && num3 == 9)
 					continue;
-				putchar(','),
-				putchar(' '),
+				putchar(',');
+				putchar(' ');
 			}
 		}
 	}
