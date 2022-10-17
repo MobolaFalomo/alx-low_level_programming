@@ -1,7 +1,9 @@
+#include <stdlib.h>
+#include <time.h>
 #include <stdio.h>
 
 /**
-  * main - print the last digit of the number stored in variable n
+  * main - print the last digit of the number stored in variable 
   *
   * Return: Always 0 (Success)
   */
@@ -23,7 +25,7 @@ int main(void)
 	{
 		printf("and is 0");
 	}
-	if (x < 6 && != 0)
+	if (x < 6 && x != 0)
 	{
 		printf("and is less than 6 and not 0");
 	}
