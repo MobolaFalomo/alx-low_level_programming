@@ -2,7 +2,6 @@
 
 /**
   * main - print _putchar
-  * is written by Mobola Falomo
   * Return: Always 0
   */
 int main(void)
