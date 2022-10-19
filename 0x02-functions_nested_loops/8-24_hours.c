@@ -3,11 +3,11 @@
 /**
   * jack_bauer - prints every minute of the day of Jack Bauer,
   * starting from 00:00 to 23:59
+  * Return: 24 hours clock
   */
 void jack_bauer(void)
 {
-	int hour;
-	int minute;
+	int hour, minute;
 
 	for (hour = 0; hour <= 23; hour++)
 	{
