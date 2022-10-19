@@ -3,6 +3,7 @@
 /**
   * times_table - prints the 9 times table, starting with 0
   *
+  * Return: return 0
   */
 void times_table(void)
 {
@@ -17,16 +18,21 @@ void times_table(void)
 			_putchar(',');
 			_putchar(' ');
 
-			prod = num * mult;
+			prod = (num * mult);
 
-			if (prod <= 9)
+			if ((prod / 10) > 0)
 			{
-				_putchar(' ');
+				_putchar((prod / 10) + '0');
 			}
 			else
 			{
-				_putchar((prod / 10) + '0');
+				_putchar(' ');
+			}
 				_putchar((prod % 10) + '0');
+			if (mult < 9)
+			{
+				_putchar(',');
+				_putchar(' ');
 			}
 		}
 		_putchar('\n');
