@@ -2,13 +2,14 @@
 
 /**
   * *leet - encodes a string into 1337
-  * @n: input
+  * @n: string to be encoded
   * Return : the value of n
   */
 
 char *leet(char *n)
 {
 	int i, j;
+
 	char s1[] = "aAeEoOtTlL";
 	char s2[] = "4433007711";
 
