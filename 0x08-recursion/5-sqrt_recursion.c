@@ -1,6 +1,23 @@
 #include "main.h"
 
 /**
+  * check -checks for the square root
+  * @i: integer
+  * @j: integer
+  *
+  * Return: return integer
+  */
+
+int check(int i, int j)
+{
+	if (i * i == j)
+		return (i);
+	if (i * i > j)
+		return (-1);
+	return (check(i + 1, j));
+}
+
+/**
   * _sqrt_recursion - returns the natural square root of a number
   * @n: number whose square root is to be calculated
   *
@@ -9,24 +26,7 @@
 
 int _sqrt_recursion(int n)
 {
-	if (n < 0)
-		return (-1);
-	return (actual_sqrt_recursion(n, 0));
-}
-
-/**
-  * actual_sqrt_recursion - recursion to find the natural square root of a num
-  * @n: number whose square rrot is to be calculated
-  * @i: iterator
-  *
-  * Return: return the resulting square root
-  */
-
-int actual_sqrt_recursion(int n, int i)
-{
-	if (i * i > n)
-		return (-1);
-	if (i * i == n)
-		return (i);
-	return (actual_sqrt_recursion(n, i + 1));
+	if (n == 0)
+		return (0);
+	return (check(1, n));
 }
