@@ -7,7 +7,7 @@ void create_word(char **, char *, int, int, int);
 /**
   * **strtow - splits a string into words
   * @str: the string to split
-  * Return: returns NULL if str is NULL 
+  * Return: returns NULL if str is NULL
   */
 
 char **strtow(char *str)
