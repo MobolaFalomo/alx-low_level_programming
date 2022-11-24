@@ -24,7 +24,7 @@ unsigned int _strlen(char *str)
   * @str: string to add to the new node
   * Return: pointer to the new node
   */
-list_t *add_node_end(list_t **head, const char *str);
+list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *new, *tmp;
 
@@ -47,8 +47,8 @@ list_t *add_node_end(list_t **head, const char *str);
 		return (new);
 	}
 	tmp = *head
-		while (tmp->next)
-			tmp = tmp->next;
+	while (tmp->next)
+		tmp = tmp->next;
 	tmp->next = new;
 	return (new);
 }
