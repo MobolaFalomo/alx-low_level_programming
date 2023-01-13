@@ -1,49 +1,20 @@
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 #include "lists.h"
+#include <stdio.h>
 
 /**
- * struct dlistint_s - doubly linked list
- * @n: integer
- * @prev: points to the previous node
- * @next: points to the next node
+ * print_dlistint - print all the elements of a dlistint_t list
+ * @h: pointer to the start of the linked list
  *
- * Description: doubly linked list node structure
- * 
+ * Return: number of nodes
  */
-typedef struct dlistint_s
+size_t print_dlistint(const dlistint_t *h)
 {
-    int n;
-    struct dlistint_s *prev;
-    struct dlistint_s *next;
-} dlistint_t;
+	size_t i;
 
-size_t print_dlistint(const dlistint_t *h);
-{
-	struct dlistint_s* head;
-	struct dlistint_s* first = NULL;
-	struct dlistint_s* second = NULL;
-	struct dlistint_s* third = NULL;
-	struct dlistint_s* fourth = NULL;
-
-	first = (struct dlistint_s*)malloc(sizeof(struct dlistint_s));
-	second = (struct dlistint_s*)malloc(sizeof(struct dlistint_s));
-	third = (struct dlistint_s*)malloc(sizeof(struct dlistint_s));
-	fourth = (struct dlistint_s*)malloc(sizeof(struct dlistint_s));
-
-	first->next = second;
-	first->prev = NULL;
-	second->next = third;
-	second->prev = first;
-	third->next = fourth;
-	third->prev = third;
-	fourth->next = NULL;
-	fourth->prev = third;
-
-	head = first;
-		display(first);
-
-		return (0);
+	for (i = 0; h != NULL; i++)
+	{
+		printf("%d\n", h->n);
+		h = h->next;
+	}
+	return (i);
 }
-
