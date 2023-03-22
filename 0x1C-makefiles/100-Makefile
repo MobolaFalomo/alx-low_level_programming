@@ -1,0 +1,33 @@
+# Compiler
+CC = gcc
+
+# Files
+SRC = $(wildcard *.c)
+OBJ = $(SRC:.c=.o)
+NAME = school
+
+# Flags
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+# Commands
+RM = rm -f
+
+.PHONY: all clean oclean fclean re
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+    $(CC) $(CFLAGS) -o $@ $^
+
+clean:
+    $(RM) $(NAME) *~ *.o
+
+oclean:
+    $(RM) $(OBJ)
+
+fclean: oclean clean
+    $(RM) $(NAME)
+
+re: fclean all
+
+$(OBJ): m.h
